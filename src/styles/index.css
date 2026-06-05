@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #131314;
+  --color-surface: #131314;
+  --color-surface-dim: #131314;
+  --color-surface-bright: #39393a;
+  --color-surface-elevated: #1a1a1b;
+  --color-surface-container-lowest: #0e0e0f;
+  --color-surface-container-low: #1c1b1c;
+  --color-surface-container: #201f20;
+  --color-surface-container-high: #2a2a2b;
+  --color-surface-container-highest: #353436;
+  --color-surface-variant: #353436;
+  --color-on-surface: #e5e2e3;
+  --color-on-surface-variant: #d0c5af;
+  --color-on-background: #e5e2e3;
+  --color-primary: #f2ca50;
+  --color-on-primary: #3c2f00;
+  --color-primary-container: #d4af37;
+  --color-on-primary-container: #554300;
+  --color-primary-fixed: #ffe088;
+  --color-primary-fixed-dim: #e9c349;
+  --color-gold-muted: rgba(212, 175, 55, 0.15);
+  --color-glass-stroke: rgba(255, 255, 255, 0.08);
+  --color-secondary: #bcc7de;
+  --color-secondary-container: #3e495d;
+  --color-on-secondary-container: #aeb9d0;
+  --color-tertiary: #a7de6f;
+  --color-tertiary-container: #8cc256;
+  --color-error: #ffb4ab;
+  --color-outline: #99907c;
+  --color-outline-variant: #4d4635;
+  --color-board-light: #ebecd0;
+  --color-board-dark: #779556;
+
+  --spacing-sidebar-width: 280px;
+  --spacing-margin-mobile: 16px;
+  --spacing-margin-desktop: 40px;
+  --spacing-gutter: 24px;
+  --spacing-container-max: 1440px;
+
+  --font-display-lg: "Inter", sans-serif;
+  --font-headline-md: "Inter", sans-serif;
+  --font-headline-sm: "Inter", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-label-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-on-surface font-body-md text-sm antialiased overflow-hidden;
+    font-family: "Inter", sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #353436;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #99907c;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-surface-elevated/50 backdrop-blur-md border border-glass-stroke;
+  }
+
+  .font-display-lg {
+    font-family: "Inter", sans-serif;
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .font-headline-md {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .font-headline-sm {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+
+  .font-body-lg {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .font-body-md {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .font-label-mono {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  .ai-card-hover {
+    @apply transition-all duration-300;
+  }
+
+  .ai-card-active {
+    @apply border-primary/40 shadow-[0_0_20px_rgba(242,202,80,0.15)];
+  }
+
+  .elo-slider {
+    @apply w-full h-2 rounded-full appearance-none cursor-pointer bg-surface-container-high;
+  }
+
+  .elo-slider::-webkit-slider-thumb {
+    @apply appearance-none w-5 h-5 rounded-full bg-primary shadow-[0_0_10px_rgba(242,202,80,0.5)] cursor-pointer;
+  }
+}
