@@ -11,29 +11,29 @@ A modern desktop chess app for playing, training, and tracking your progress. Bu
 ## Screenshots
 
 ### Dashboard
-Quick play, daily tactics puzzles, blitz rating progress, and recent activity.
+Quick play shortcuts, daily tactics puzzle, rating progress, and recent activity.
 
-![Dashboard](docs/screenshots/dashboard.png)
+![Dashboard](docs/screenshots/Dashboard.jpg)
 
 ### Play vs AI
 Choose an AI personality, tune difficulty from 800–2800 ELO, and start a match.
 
-![Play lobby](docs/screenshots/play-lobby.png)
+![Play lobby](docs/screenshots/PlayNow.jpg)
 
-### Daily Tactics
-Interactive puzzle board with random puzzles when you click **Solve Puzzle**.
+### Live Game
+Play against Stockfish-powered AI with clocks, move history, and in-game controls.
 
-![Daily tactics](docs/screenshots/daily-tactics.png)
+![Live game vs AI](docs/screenshots/Play%20Vs%20AI.jpg)
 
-### Rating Progress
-Track your blitz rating over your last games with a readable chart.
+### Analytics
+Import PGN, run engine analysis, and review positions with evaluation.
 
-![Progress chart](docs/screenshots/progress-chart.png)
+![Analytics](docs/screenshots/Analytics.jpg)
 
-### Tournaments
-Online-ready tournament hub (live data when backend is connected).
+### Profile
+Ratings by time control, win/loss/draw stats, activity heatmap, and achievements.
 
-![Tournaments](docs/screenshots/tournaments.png)
+![Profile](docs/screenshots/Profile.jpg)
 
 ---
 
